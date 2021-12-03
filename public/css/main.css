@@ -1,0 +1,215 @@
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Arapey&family=DM+Serif+Display&family=Tenor+Sans&display=swap');
+
+/* Colors */
+:root {
+   --bluegreen: #99DDC8;
+   --pistachio: #95BF74;
+   --middlegreen: #5B8B55;
+   --ferngreen: #556F44;
+   --darkslategrey: #283F3B;
+   --pistachio-rgba: rgba(149, 191, 116, 0.5);
+}
+
+/* Global CSS */
+
+/* * {
+  outline: 1px solid #f00 !important;
+} */
+html, body {
+  font-family: "DM Serif Display", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+ /* Include Snippets CSS */
+
+ /* Header CSS */
+header {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-logo-a,
+.home-logo-a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  padding: 2%;
+  column-gap: 10px;
+  max-width: 100vw;
+  background-color: var(--middlegreen);
+}
+
+.header-info img {
+  width: 15%;
+}
+
+.header-info h1 {
+  font-family: "DM Serif Display", sans-serif;
+  font-size: 1.5em;
+}
+ /* Nav CSS */
+
+ /* Developed using this template: https://dev.to/ljcdev/easy-hamburger-menu-with-js-2do0 */
+ nav ul {
+   margin: 0;
+ }
+ .menuItem {
+  display: block;
+  font-size: 1.8rem;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 3%;
+}
+
+.menuItem:hover {
+  text-decoration: underline;
+}
+
+.hamburger {
+  position: absolute;
+  z-index: 100;
+  top: 1.45rem;
+  right: 1rem;
+  padding: 4px;
+  border: var(--bluegreen) solid 2px;
+  border-radius: 10%;
+  background: var(--pistachio);
+  cursor: pointer;
+}
+
+.fixed-ham {
+  position: fixed;
+}
+
+.closeIcon {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  transform: translateY(-120%);
+  transition: transform 0.2s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: var(--darkslategrey);
+  color: var(--bluegreen);
+  list-style: none;
+  padding: 4rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 50px;
+}
+
+.showMenu {
+  transform: translateY(0);
+  height: 100%;
+  margin-top: -10px;
+  overflow: hidden;
+}
+ /* Footer CSS */
+ footer {
+   font-family: "DM Serif Display", sans-serif;
+   background: url('/img/blackmamba.png');
+   color: whitesmoke;
+   margin: 0 auto;
+   text-align: center;
+   padding: 3%;
+ }
+
+ .footer-info a,
+ .footer-info a:hover,
+ .footer-info a:visited {
+    text-decoration: none;
+    color: var(--bluegreen);
+ }
+
+ footer ul {
+   padding: 0%;
+   list-style-type: none;
+   display: grid;
+   grid-template-columns:repeat(3, 1fr);
+   row-gap: 30px;
+ }
+
+ .footer-info {
+   display: flex;
+   flex-direction: column;
+   column-gap: 5px;
+  font-size: 1.25em;
+  padding: 1% 0% 1% 0%;
+ }
+
+ .footer-links img {
+   width: 25%;
+ }
+
+ hr {
+   width: 95%;
+   border: none;
+   background-color: var(--pistachio);
+   height: 0.2px;
+ }
+
+
+
+ /* Content CSS */
+ /* Home CSS */
+.home-main {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+ .img-container {
+   border-top: #99DDC8 solid 2px;
+   border-bottom: #99DDC8 solid 2px;
+   width: 100%;
+   height: 450px;
+   overflow: hidden;
+ }
+
+ .home-img {
+   width: 600px;
+   height: 450px;
+   object-fit: cover;
+   display: block;
+ }
+
+ .overlay {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform:translate(-50%, -50%);
+   margin: 0 auto;
+   text-align: center;
+   border: var(--middlegreen) 2px solid;
+   color: whitesmoke;
+   background: var(--pistachio-rgba);
+   border-radius: 15%;
+   padding: 2% 2% 5% 2%;
+ }
+
+ .overlay a,
+ .overlay a:visited {
+    padding: 2% 10% 2% 10%;
+    background-color: var(--darkslategrey);
+    color: whitesmoke;
+    text-decoration: none;
+    border: whitesmoke 2px solid;
+ }

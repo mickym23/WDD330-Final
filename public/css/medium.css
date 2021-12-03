@@ -1,0 +1,30 @@
+@media screen and (min-width: 600px) {
+
+   .header-info {
+      padding: 0.5%;
+      column-gap: 10px;
+    }
+
+    .header-info img {
+      width: 12.5%;
+    }
+
+    .hamburger {
+       top: 2rem;
+       right: 2rem;
+    }
+
+    .menuItem {
+      font-size: 1.4rem;
+    }
+
+   .home-img {
+      width: 900px;
+      height: 450px;
+      object-fit: cover;
+    }
+
+   .footer-links img {
+      width: 15%;
+    }
+}

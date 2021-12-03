@@ -1,0 +1,31 @@
+{
+  "name": "wdd330-final",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000W\u0000D\u0000D\u00003\u00003\u00000\u0000-\u0000F\u0000i\u0000n\u0000a\u0000l\u0000\r\u0000 \u0000",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js",
+    "server": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mickym23/WDD330-Final.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mickym23/WDD330-Final/issues"
+  },
+  "homepage": "https://github.com/mickym23/WDD330-Final#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongodb": "^4.2.0",
+    "mongoose": "^6.0.13",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

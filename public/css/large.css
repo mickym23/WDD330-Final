@@ -1,0 +1,39 @@
+@media screen and (min-width: 900px) {
+
+   .header-info {
+      height: 100px;
+      column-gap: 10px;
+    }
+
+    .header-info img {
+      width: 10%;
+    }
+
+    .hamburger {
+       top: 2rem;
+
+    }
+
+    .menuItem {
+      font-size: 1.4rem;
+    }
+
+    .img-container {
+       height: auto;
+       object-fit: fill;
+    }
+
+   .home-img {
+      width:100%;
+      height: 100%;
+      object-fit: fill;
+    }
+
+   .footer-links img {
+      width: 15.5%;
+    }
+
+   footer ul {
+      grid-template-columns: repeat(6, 1fr);
+   }
+}
