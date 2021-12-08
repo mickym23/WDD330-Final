@@ -1,5 +1,9 @@
 @media screen and (min-width: 900px) {
 
+   body {
+      background: linear-gradient(110deg, var(--darkslategrey) 60%, black 60%);
+   }
+
    .header-info {
       height: 100px;
       column-gap: 10px;
@@ -18,9 +22,55 @@
       font-size: 1.4rem;
     }
 
+    .banner {
+      display: inline-flex;
+      flex-wrap: nowrap;
+       justify-content: center;
+       align-items: center;
+    }
+
+    .vertical-safari,
+    .vertical-safari:visited {
+       font-size:1.3em;
+       font-family: "Arapey", sans-serif;
+       text-align: center;
+       display: block;
+       padding: 0%;
+       text-decoration: none;
+       transform: rotate(-90deg) translateY(60px);
+       text-transform: uppercase;
+       color: whitesmoke;
+       width: 350px; 
+    }
+
+    .vertical-safari2 {
+      transform: rotate(90deg) translateY(60px);
+    }
+
+    .arrow {
+       align-items: center;
+       justify-self: center;
+       font-size: 1.4em;
+    }
+
+    .banner:first-child,
+    .banner:last-child {
+       flex-grow: 1;
+    }
+
+    .banner:nth-child(2) {
+       flex-grow: 20;
+    }
+
+
+
     .img-container {
        height: auto;
        object-fit: fill;
+       width: 100%;
+       margin: 0 auto;
+       margin-top: 2%;
+       border: 2px solid var(--bluegreen);
     }
 
    .home-img {
@@ -29,11 +79,29 @@
       object-fit: fill;
     }
 
+    .home-info-div {
+       width: 50%;
+       margin: 0 auto;
+       margin-top: 2%;
+    }
+
+    .home-info-div:last-child {
+      margin-bottom: 2%;
+    }
+
+    
+
    .footer-links img {
       width: 15.5%;
     }
 
    footer ul {
       grid-template-columns: repeat(6, 1fr);
+   }
+}
+
+@media screen and (min-width: 1200px) {
+   .overlay {
+      top: 12.5%;
    }
 }

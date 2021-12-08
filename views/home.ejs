@@ -1,12 +1,55 @@
 <%- include('includes/header.ejs') %>
 <main class="home-main">
+   <div class="banner">
+   <a class="vertical-safari" href="/safari">Explore Our Safaris <span class="arrow">&#8608;</span></a>
    <div class="img-container">
-      <img class="home-img" src="/img/home.jpg" alt="Home Page Image of Rhino and Wildebeest">
+      <video class="home-img" autoplay muted loop>
+         <source src="/vid/homevid_large.mp4"  type="video/mp4" alt="Zebra running in the veld">
+         Your browser does not support the video.
+      </video>
    </div>
+   <a class="vertical-safari vertical-safari2" href="#footer-links">Explore Our Socials <span class="arrow">&#8608;</span></a>
+</div>
 
    <div class="overlay">
       <h2>"A World Awaits!"</h2>
-      <a href="/safari">Explore Now</a>
+      <a href="/safari">Explore Now!</a>
    </div>
+   <div class="home-info-div">
+      <h2>What's There To Do At Kirafu Adventures?</h2>
+   <p>
+      Nature exploration is the new trend! Here at Kirafu Adventures we offer 
+      a range of great experiences for you, your friends, and your family. One of our 
+      best attractions are our safari tours where you might be lucky enough to spot the
+      elusive South African Big Five (Lion, African Bush Elephant, Leopard, Black Rhinoceros, African Buffalo). 
+      He have world-class lakes that provide some great fishing opportunities and wild Blue Wildebeest and Springbok 
+      to hunt. 
+   </p>
+   <img src="/img/homelion.jpg" alt="Image of Lion">
+   </div>
+
+   <div class="home-info-div">
+      <h2>Kirafu Fun Facts</h2>
+      <ul>
+         <% for (let fact of facts) { %>
+            <li class="facts"><p><%= fact %></p></li>
+         <% } %>
+      </ul>
+   <img src="/img/homerhino.jpg" alt="Image of Rhinoceros">
+   </div>
+
+   <div class="home-info-div">
+      <h2>About Us</h2>
+   <p>
+      Situated in the heart of the South African highveld, Kirafu Adventures 
+      has one of the most special experiences that a national nature reserve can offer. 
+      Home to the Big Five, we take pride in our nature and embrace it in our culture.
+      We have many traditional lodges, facilities, and activities that will be a winner for 
+      any family. For a truly authentic South African experience, make a turn around here! 
+      We hope to see you soon!
+   </p>
+   <img src="/img/homeleo.jpg" alt="Image of Leopard">
+   </div>
+
 </main>
 <%- include('includes/footer.ejs') %>

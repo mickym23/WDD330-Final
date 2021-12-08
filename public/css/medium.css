@@ -1,5 +1,9 @@
 @media screen and (min-width: 600px) {
 
+  body {
+    background: linear-gradient(105deg, var(--darkslategrey) 60%, black 60%);
+  }
+
    .header-info {
       padding: 0.5%;
       column-gap: 10px;
@@ -18,10 +22,24 @@
       font-size: 1.4rem;
     }
 
+    .overlay {
+      top: 8%;
+    }
+
    .home-img {
       width: 900px;
       height: 450px;
       object-fit: cover;
+    }
+
+    .home-info-div ul,
+    .home-info-div p {
+      text-align: left;
+      padding: 1% 6% 1% 6%;
+    }
+
+    .home-info-div img{
+      max-width: 60%;
     }
 
    .footer-links img {

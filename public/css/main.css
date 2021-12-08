@@ -8,7 +8,7 @@
    --middlegreen: #5B8B55;
    --ferngreen: #556F44;
    --darkslategrey: #283F3B;
-   --pistachio-rgba: rgba(149, 191, 116, 0.5);
+   --pistachio-rgba: rgba(149, 191, 116, 0.85);
 }
 
 /* Global CSS */
@@ -22,6 +22,8 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
+  background: linear-gradient(110deg, var(--darkslategrey) 60%, black 60%);
+  scroll-behavior: smooth;
 }
 
  /* Include Snippets CSS */
@@ -31,6 +33,7 @@ header {
   position: relative;
   align-items: center;
   justify-content: center;
+  border-bottom: var(--darkslategrey) 2px solid;
 }
 
 .home-logo-a,
@@ -130,6 +133,7 @@ header {
    margin: 0 auto;
    text-align: center;
    padding: 3%;
+   border-top: var(--pistachio) 2px solid;
  }
 
  .footer-info a,
@@ -176,6 +180,11 @@ header {
   margin: 0;
 }
 
+
+.vertical-safari {
+  display: none;
+}
+
  .img-container {
    border-top: #99DDC8 solid 2px;
    border-bottom: #99DDC8 solid 2px;
@@ -193,12 +202,12 @@ header {
 
  .overlay {
    position: absolute;
-   top: 50%;
+   top: 10%;
    left: 50%;
    transform:translate(-50%, -50%);
    margin: 0 auto;
    text-align: center;
-   border: var(--middlegreen) 2px solid;
+   border: var(--darkslategrey) 2px solid;
    color: whitesmoke;
    background: var(--pistachio-rgba);
    border-radius: 15%;
@@ -212,4 +221,27 @@ header {
     color: whitesmoke;
     text-decoration: none;
     border: whitesmoke 2px solid;
+ }
+
+ .home-info-div {
+  color: whitesmoke;
+  border: white 2px solid;
+  padding: 2%;
+  background-color: #5B8B55;
+  margin: 10%;
+  max-width: 100%;
+  text-align: center;
+  justify-content: center;
+ }
+
+ .home-info-div ul{
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+ }
+
+ .home-info-div img{
+   max-width: 90%;
+   border: white 2px solid;
+   box-shadow: #99DDC8 0 0 30px;
  }
