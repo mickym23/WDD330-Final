@@ -1,3 +1,5 @@
+const Safari = require('../models/safari.js');
+
 exports.getIndex = (req, res, next) => {
 
    const facts = [
@@ -17,8 +19,15 @@ exports.getIndex = (req, res, next) => {
 }
 
 exports.getSafari = (req, res, next) => {
-   res.render('safari', {
-      pageTitle: 'Safari | Kirafu Adventures'
+   Safari.find()
+      .then(safari => {
+         console.log(safari)
+         res.render('safari', {
+            pageTitle: 'Safari | Kirafu Adventures'
+         })
+      })
+      .catch(err => {
+            console.log(err)
    })
 }
 
