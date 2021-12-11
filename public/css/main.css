@@ -1,5 +1,7 @@
 /* Typography */
 @import url('https://fonts.googleapis.com/css2?family=Arapey&family=DM+Serif+Display&family=Tenor+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+
 
 /* Colors */
 :root {
@@ -302,4 +304,79 @@ header {
    padding: 2%;
    text-decoration: none;
    border: var(--bluegreen) 2px solid;
+ }
+
+ /* Details Page */
+
+ .safari-details {
+   padding: 5%;
+   font-family: "Nanum Myeongjo", sans-serif;
+ 
+ }
+ .details-header {
+   text-align: center;
+   color: var(--pistachio);
+   font-size: 1.5em;
+ }
+
+ .product-images img{
+   max-width: 80%;
+   border: var(--pistachio) solid 3px;
+ }
+
+ .product-images {
+   display: grid;
+   grid-template-columns: 1fr;
+   justify-items: center;
+   row-gap: 20px;
+   margin: 0 auto;
+   text-align: center;
+ }
+
+ .details {
+   display: flex;
+   flex-direction: column-reverse;
+   row-gap: 20px;
+ }
+
+ .product-details {
+  font-size: 0.9em;
+  margin: 0 auto;
+  max-width: 75%;
+  font-weight: 300;
+   padding: 2%;
+   color: black;
+   box-shadow: 0 0 0 2px var(--darkslategrey),
+               0 0 0 4px var(--pistachio),
+               0 0 0 6px var(--darkslategrey),
+               0 0 0 8px var(--pistachio);
+   background-color: var(--pistachio-rgba);
+ }
+
+ .backbutton {
+   font-family: inherit;
+   font-weight: 700;
+   color: var(--darkslategrey);
+   border: var(--middlegreen) 2px outset;
+   border-radius: 1000px;
+   box-shadow: 0 0 3px whitesmoke;
+   background: linear-gradient(to right, var(--bluegreen), var(--pistachio));
+   text-decoration: none;
+   padding: 2%;
+ }
+
+ .contact-details,
+ .contact-details:visited,
+ .contact-details:hover {
+   width: 75%;
+   margin: 0 auto;
+   display: block;
+   margin-top: 20px;
+   color: var(--darkslategrey);
+   font-weight: 700;
+   text-decoration: none;
+   text-align: center;
+   padding: 2%;
+   border: var(--darkslategrey) 2px outset;
+   background-color: var(--bluegreen);
  }

@@ -46,7 +46,31 @@
       grid-template-columns: repeat(3, 1fr);
     }
 
+    .product-deatails {
+      grid-area: desc;
+    }
+
+    .product-images {
+      grid-area: images;
+    }
+
+    .contact-details {
+      grid-area: cbutton
+    }
+
+    .details {
+      display: grid;
+      grid-template-areas: "images desc"
+                           "images cbutton"
+                           "images ...";
+    }
+
+    .backbutton {
+      padding: 1%;
+    }
+
    .footer-links img {
       width: 15%;
     }
+
 }

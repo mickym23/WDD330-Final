@@ -35,7 +35,17 @@ exports.getSafari = (req, res, next) => {
 
 exports.getDetails = (req, res, next) => {
    const productId = req.params.productid;
-   console.log(productId)
+   Safari.findById(productId)
+      .then(safari => {
+         res.render("saf-details", {
+            pageTitle: `${safari.name} | Kifaru Adventures`,
+            path: '/details',
+            safari: safari
+         })
+      })
+      .catch(err => {
+      console.log(err)
+   })
 }
 
 exports.getLodge = (req, res, next) => {
