@@ -14,6 +14,7 @@ exports.getIndex = (req, res, next) => {
    ]
    res.render('home', {
       pageTitle: 'Home | Kirafu Adventures',
+      path: '/',
       facts: facts
    })
 }
@@ -21,14 +22,20 @@ exports.getIndex = (req, res, next) => {
 exports.getSafari = (req, res, next) => {
    Safari.find()
       .then(safari => {
-         console.log(safari)
          res.render('safari', {
-            pageTitle: 'Safari | Kirafu Adventures'
+            pageTitle: 'Safari | Kirafu Adventures',
+            path: '/safari',
+            safaris: safari
          })
       })
       .catch(err => {
             console.log(err)
    })
+}
+
+exports.getDetails = (req, res, next) => {
+   const productId = req.params.productid;
+   console.log(productId)
 }
 
 exports.getLodge = (req, res, next) => {

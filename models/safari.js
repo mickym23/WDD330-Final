@@ -9,7 +9,7 @@ module.exports = mongoose.model('Safari', new Schema({
     required: true
   },
   imageUrl: {
-    type: String,
+    type: Array,
     required: true
   },
   description: {

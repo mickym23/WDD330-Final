@@ -245,3 +245,61 @@ header {
    border: white 2px solid;
    box-shadow: #99DDC8 0 0 30px;
  }
+
+
+ /* Safari Page */
+ .safari-main {
+  box-sizing:border-box;
+  padding: 5%;
+ }
+
+ .cards {
+   display: grid;
+   grid-template-columns: 1fr 1fr; 
+   gap: 30px;
+ }
+
+ .card {
+   position: relative;
+    border: var(--bluegreen) 2px solid;
+    background-color: var(--ferngreen);
+    box-sizing: border-box;
+    text-align: center;
+    height: auto;
+    padding-bottom: 10%;
+    transition: transform 200ms 50ms ease-out;
+    /* box-shadow: 0 0 5px var(--pistachio); */
+ }
+
+ .card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 5px var(--pistachio);
+ }
+
+ .card h2 {
+   text-align: center;
+   font-size: 0.95em;
+ }
+
+ .card img {
+   max-width: 100%;
+   border-bottom: var(--bluegreen) 2px solid;
+ }
+
+ .details-a,
+ .details-a:visited,
+ .details-a:hover {
+   color: black;
+   display: block;
+   text-decoration: none;
+
+ }
+ .display-button {
+   font-size: 0.9em;
+   text-align: center;
+   color: var(--bluegreen);
+   background-color: #283F3B;
+   padding: 2%;
+   text-decoration: none;
+   border: var(--bluegreen) 2px solid;
+ }

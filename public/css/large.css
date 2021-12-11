@@ -89,7 +89,22 @@
       margin-bottom: 2%;
     }
 
-    
+    .safari-main {
+       padding: 6% 10% 6% 10%;
+    }
+
+    .cards {
+       gap: 50px;
+    }
+
+    .card h2 {
+       font-size: 1.22em;
+       padding-bottom: 5%;
+    }
+
+    .display-button {
+      font-size: 1.1em;
+    }
 
    .footer-links img {
       width: 15.5%;

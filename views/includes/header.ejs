@@ -28,12 +28,12 @@
      
    <nav>
       <ul class="menu">
-         <li><a class="menuItem" href="/">Home</a></li>
-         <li><a class="menuItem" href="/safari">Safari</a></li>
-         <li><a class="menuItem" href="/lodging">Lodging</a></li>
-         <li><a class="menuItem" href="/hunting">Hunting</a></li>
-         <li><a class="menuItem" href="/fishing">Fishing</a></li>
-         <li><a class="menuItem" href="/about-us">About Us</a></li>
+         <li><a class="menuItem <%= path === '/' ? 'activeNav' : '' %>"href="/">Home</a></li>
+         <li><a class="menuItem <%= path === '/safari' ? 'activeNav' : '' %>"href="/safari">Safari</a></li>
+         <li><a class="menuItem <%= path === '/lodging' ? 'activeNav' : '' %>"href="/lodging">Lodging</a></li>
+         <li><a class="menuItem <%= path === '/hunting' ? 'activeNav' : '' %>"href="/hunting">Hunting</a></li>
+         <li><a class="menuItem <%= path === '/fishing' ? 'activeNav' : '' %>"href="/fishing">Fishing</a></li>
+         <li><a class="menuItem <%= path === '/about-us' ? 'activeNav' : '' %>"href="/about-us">About Us</a></li>
       </ul>
    </nav>
    <button class="hamburger">

@@ -6,6 +6,8 @@ const Router = express.Router();
 
 Router.get('/safari', shopController.getSafari);
 
+Router.get('/details/:productid', shopController.getDetails);
+
 Router.get('/lodging', shopController.getLodge);
 
 Router.get('/hunting', shopController.getHunt);
