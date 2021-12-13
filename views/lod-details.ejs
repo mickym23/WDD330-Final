@@ -1,0 +1,22 @@
+<%- include('includes/header.ejs') %>
+<main class="safari-details">
+
+   <a class="backbutton" href="/lodging">Back</a>
+   <h2 class="details-header"><%= lodge.name %></h2>
+
+   <div class="details">
+      <div class="product-images">
+         <% for (img of lodge.imageUrl) { %>
+         <img src="/img/<%= img %>" alt="Image for the <%= lodge.name %>">
+         <% } %> 
+      </div>
+
+      <div class="product-details">
+         <h3><%= lodge.description.replace(/\\n/g, '\n') %></h3>
+         <a class="contact-details" href="/contact-us">Contact Us for More Info</a>
+      </div>
+   </div>
+   
+   
+</main>
+<%- include('includes/footer.ejs') %>

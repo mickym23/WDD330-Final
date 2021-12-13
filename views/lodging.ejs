@@ -1,5 +1,16 @@
 <%- include('includes/header.ejs') %>
-<main>
-   <h1>Lodging</h1>
+<main class="safari-main">
+   <div class="cards">
+      <% for (let lodge of lodges) { %>
+         <div class="card" id="product">
+            <a class="details-a" href="/details/<%= lodge._id %>/?type=lodge">
+            <img src="/img/<%= lodge.imageUrl[0] %>" alt="Image of the <%= lodge.name %> from Kifaru Adventures">
+            <h2><%= lodge.name %></h2>
+            <div class="button-div">
+               <a class="display-button" href="/contact-us">Contact Us</a>
+            </div>
+         </div></a>
+      <% } %>
+   </div>
 </main>
 <%- include('includes/footer.ejs') %>

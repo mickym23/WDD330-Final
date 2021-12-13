@@ -1,4 +1,5 @@
 const Safari = require('../models/safari.js');
+const Lodge = require('../models/lodge.js')
 
 exports.getIndex = (req, res, next) => {
 
@@ -35,28 +36,60 @@ exports.getSafari = (req, res, next) => {
 
 exports.getDetails = (req, res, next) => {
    const productId = req.params.productid;
-   Safari.findById(productId)
-      .then(safari => {
-         res.render("saf-details", {
-            pageTitle: `${safari.name} | Kifaru Adventures`,
-            path: '/details',
-            safari: safari
-         })
-      })
-      .catch(err => {
-      console.log(err)
-   })
+   const type = req.query.type;
+   switch (type) {
+      case 'safari':
+         Safari.findById(productId)
+            .then(safari => {
+               res.render("saf-details", {
+                  pageTitle: `${safari.name} | Kifaru Adventures`,
+                  path: '/details',
+                  safari: safari
+               })
+            })
+            .catch(err => {
+               console.log(err)
+            })
+         break;
+
+      case 'lodge':
+         Lodge.findById(productId)
+            .then(lodge => {
+               res.render("lod-details", {
+                  pageTitle: `${lodge.name} | Kifaru Adventures`,
+                  path: '/details',
+                  lodge: lodge
+               })
+            })
+            .catch(err => {
+               console.log(err)
+            })
+         break;
+      default:
+         throw new Error('No case like that!!!')
+         break;
+      
+   }
 }
 
 exports.getLodge = (req, res, next) => {
-   res.render('lodging', {
-      pageTitle: 'Lodging | Kirafu Adventures'
+   Lodge.find()
+   .then(lodges => {
+      res.render('lodging', {
+         pageTitle: 'Lodging | Kirafu Adventures',
+         path: '/lodging',
+         lodges: lodges
+      })
    })
+   .catch(err => {
+         console.log(err)
+})
 }
 
 exports.getHunt= (req, res, next) => {
    res.render('hunting', {
-      pageTitle: 'Hunting | Kirafu Adventures'
+      pageTitle: 'Hunting | Kirafu Adventures',
+      path: '/hunting'
    })
 }
 

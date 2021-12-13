@@ -3,7 +3,7 @@
    <div class="cards">
       <% for (let safari of safaris) { %>
          <div class="card" id="product">
-            <a class="details-a" href="/details/<%= safari._id %>">
+            <a class="details-a" href="/details/<%= safari._id %>?type=safari">
             <img src="/img/<%= safari.imageUrl[0] %>" alt="Image of the <%= safari.name %> from Kifaru Adventures">
             <h2><%= safari.name %></h2>
             <div class="button-div">
