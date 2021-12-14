@@ -4,6 +4,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 dotenv.config();
 
 const MONGODB_URI = process.env.MONGODB_URI;
@@ -19,6 +20,13 @@ app.use(express.static(path.join(__dirname, 'css')));
 app.use(express.static(path.join(__dirname, 'js')));
 app.use(express.static(path.join(__dirname, 'img')));
 app.use(express.static(path.join(__dirname, 'public')));
+
+const corsOptions = {
+   origin: "https://kifaruadventures.herokuapp.com/",
+   optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
+
 
 // PORT for Heroku or Localhost
 const PORT = process.env.PORT || 3000;
