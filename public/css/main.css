@@ -380,3 +380,27 @@ header {
    border: var(--darkslategrey) 2px outset;
    background-color: var(--bluegreen);
  }
+
+ /* Hunting */
+ .hunting-main {
+   padding: 5%;
+   margin: 0 auto;
+ }
+.hunting-cards {
+  font-size: 0.9em;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.hunt-card {
+  border: var(--pistachio) 2px solid;
+  box-shadow: 0 0 5px var(--pistachio);
+  padding: 2%;
+  background-color: var(--ferngreen);
+}
+
+.hunt-card img {
+  text-align: right;
+  width: 30px;
+}

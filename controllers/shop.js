@@ -86,10 +86,34 @@ exports.getLodge = (req, res, next) => {
 })
 }
 
-exports.getHunt= (req, res, next) => {
+exports.getHunt = (req, res, next) => {
+   
+   const hunts = [
+      {
+         name: 'Beginners Bushveld Package',
+         price: 4999,
+         description: `The bushveld of Kifaru's vast expanse is famous as one of the best destinations for kudu and impala hunting in all of southern Africa. In addition to the big kudu, blue wildebeest, and impala this area is known for, this part of the country is also home to large and diverse populations of many other species of plains game. With the opportunity to enjoy an incredible African safari hunting experience for exceptional trophy quality animals in one of the wildest and least developed areas remaining in South Africa, it’s easy to understand why this is one of our most popular hunting packages. This South African hunting safari includes the trophy fees for a kudu, a blue wildebeest, an impala, and a warthog.`,
+         trackers: false,
+         skinners: false,
+         guides: true,
+         trophies: true,
+         taxidermy: false
+      },
+      {
+         name: 'Ultimate Hunter\'s Experience',
+         price: 9999,
+         description: `After arriving at Kifaru Adventures, you’ll be greeted by your professional hunter. He will drive you through the natural beauty of the sweeping African plains where countless herds of magnificent animals graze. After a little rest and refreshment you’ll be ready, for soon, the hunt will begin! A four-wheel drive vehicle, fitted with two-way radios, will be driven by your professional hunter during your safari. The scenery blends from hilltops to flat savannas where Springbuck and other game are numerous. Once game is spotted, you and your professional hunter will leave the vehicle to stalk on foot. He will then assist you in selecting the trophy that you will take.`,
+         trackers: true,
+         skinners: true,
+         guides: true,
+         trophies: true,
+         taxidermy: true
+      }
+   ]
    res.render('hunting', {
       pageTitle: 'Hunting | Kirafu Adventures',
-      path: '/hunting'
+      path: '/hunting',
+      hunts: hunts
    })
 }
 
