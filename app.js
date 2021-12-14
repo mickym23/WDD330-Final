@@ -3,6 +3,7 @@ const path = require('path');
 const express = require('express');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 dotenv.config();
 
 const MONGODB_URI = process.env.MONGODB_URI;
@@ -12,6 +13,8 @@ const app = express();
 // Using EJS template
 app.set('view engine', 'ejs');
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
 app.use(express.static(path.join(__dirname, 'css')));
 app.use(express.static(path.join(__dirname, 'js')));
 app.use(express.static(path.join(__dirname, 'img')));

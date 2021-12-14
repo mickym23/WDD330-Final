@@ -528,3 +528,9 @@ header {
   max-width: 100%;
   border: solid 2px var(--darkslategrey);
 }
+
+/* Contact Us */
+.contact-main input[type="text"]:focus:invalid,
+.contact-main input[type="email"]:focus:invalid {
+  box-shadow: 0 0 5px 1px red;
+} 

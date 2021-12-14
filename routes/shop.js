@@ -16,6 +16,8 @@ Router.get('/fishing', shopController.getFish);
 
 Router.get('/contact-us', shopController.getContactUs);
 
+Router.post('/contact', shopController.postContact);
+
 Router.get('/', shopController.getIndex);
 
 module.exports = Router;

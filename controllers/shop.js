@@ -1,6 +1,13 @@
+const sendgridKey = require('@sendgrid/mail');
+
 const Safari = require('../models/safari.js');
 const Lodge = require('../models/lodge.js');
 const Fish = require('../models/fish.js');
+const User = require('../models/user.js');
+
+sendgridKey.setApiKey(process.env.SENDGRID_API_KEY);
+
+
 exports.getIndex = (req, res, next) => {
 
    const facts = [
@@ -150,5 +157,41 @@ exports.getContactUs = (req, res, next) => {
 }
 
 exports.postContact = (req, res, next) => {
-   
+   const fname = req.body.fname;
+   const lname = req.body.lname;
+   const email = req.body.email;
+
+   const user = new User({
+      fname: fname,
+      lname: lname,
+      email: email
+   });
+
+   return user.save()
+      .then(result => {
+         console.log(result);
+      })
+      .then(result => {
+         const msg = {
+            to: email,
+            from: 'illuminationofdemacia@gmail.com',
+            subject: 'Thank You For Contacting Kifaru Adventures',
+            html: `<div style="max-width:100%; padding: 10%; color: white; background-color: #283f3b;"><img style="max-width: 100% border: whitesmoke 2px solid;" src="https://raw.githubusercontent.com/mickym23/WDD330-Final/main/kifarubanner.jpg" alt="Kifaru Banner"><br><h1>We'll contact you shortly. We appreciate your interest in Kifaru Adventures.</h1>
+                     <h2>Feel free to email us at: illuminationofdemacia@gmail.com</h2></div>`
+         };
+         sendgridKey
+            .send(msg)
+            .then(result => {
+               console.log('Email sent');
+               res.redirect('/')
+            })
+            .catch(err => {
+            console.log(err);
+         })
+      })
+      .catch(err => {
+         const error = new Error(err);
+         error.httpStatusCode = 500;
+         return next(error);
+      });
 }

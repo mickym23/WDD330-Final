@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/mickym23/WDD330-Final#readme",
   "dependencies": {
+    "@sendgrid/mail": "^7.6.0",
+    "body-parser": "^1.19.1",
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
