@@ -135,6 +135,47 @@
       padding:1%;
    }
 
+   .hunting-main {
+      padding: 5%;
+   }
+
+   .slideshow-container {
+      max-width: 50%;
+   }
+
+   .hunting-cards {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 50px;
+   }
+
+   .hunt-card {
+      font-size: 1.1em;
+   }
+
+   .hunt-card li {
+      font-size: 1.12em;
+   }
+
+   .text {
+      font-size: 1.3em;
+      padding: 1% ;
+   }
+
+   .fishing-main {
+      padding: 2%;
+   }
+
+   .fishing {
+      grid-template-columns: 2.5fr 2fr;
+      column-gap: 50px;
+
+   }
+
+   .image-gallery {
+      justify-self: flex-end;
+      width: 100%;
+   }
+
    .footer-links img {
       width: 15.5%;
     }
@@ -147,5 +188,14 @@
 @media screen and (min-width: 1200px) {
    .overlay {
       top: 12.5%;
+   }
+
+   .hunting-cards {
+      justify-items: center;
+      margin: 0 auto;
+   }
+
+   .hunt-card {
+      width: 75%;
    }
 }

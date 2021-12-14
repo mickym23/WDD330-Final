@@ -65,6 +65,21 @@
                            "images ...";
     }
 
+    .catch {
+      grid-area: catch;
+    }
+
+    .image-gallery {
+      grid-area: gallery;
+    }
+    .fishing {
+      display: grid;
+      column-gap: 20px;
+      grid-template-areas: "catch gallery"
+                            ". gallery";
+                            
+    }
+
     .backbutton {
       padding: 1%;
     }

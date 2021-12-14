@@ -1,6 +1,6 @@
 const Safari = require('../models/safari.js');
-const Lodge = require('../models/lodge.js')
-
+const Lodge = require('../models/lodge.js');
+const Fish = require('../models/fish.js');
 exports.getIndex = (req, res, next) => {
 
    const facts = [
@@ -87,7 +87,6 @@ exports.getLodge = (req, res, next) => {
 }
 
 exports.getHunt = (req, res, next) => {
-   
    const hunts = [
       {
          name: 'Beginners Bushveld Package',
@@ -118,19 +117,38 @@ exports.getHunt = (req, res, next) => {
 }
 
 exports.getFish = (req, res, next) => {
-   res.render('fishing', {
-      pageTitle: 'Fishing | Kirafu Adventures'
-   })
-}
-
-exports.getAboutUs = (req, res, next) => {
-   res.render('about-us', {
-      pageTitle: 'About Us | Kirafu Adventures'
+   const fish = [
+      'Barbel',
+      'Mackerel',
+      'Ghost Carp',
+      'Rainbow Trout',
+      'Red Breast Tilapia',
+      'Southern Barred Minnow',
+      'Inkomati Chiselmouth',
+      'Redeye Labeo'
+   ];
+   Fish
+      .find()
+      .then(fishImages => {
+         res.render('fishing', {
+            pageTitle: 'Fishing | Kirafu Adventures',
+            path: '/fishing',
+            fish: fish,
+            images: fishImages
+         })
+      })
+      .catch(err => {
+            console.log(err)
    })
 }
 
 exports.getContactUs = (req, res, next) => {
    res.render('contact-us', {
-      pageTitle: 'Contact Us | Kirafu Adventures'
+      pageTitle: 'Contact Us | Kirafu Adventures',
+      path: '/contact-us'
    })
+}
+
+exports.postContact = (req, res, next) => {
+   
 }

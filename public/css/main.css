@@ -383,7 +383,7 @@ header {
 
  /* Hunting */
  .hunting-main {
-   padding: 5%;
+   padding: 10%;
    margin: 0 auto;
  }
 .hunting-cards {
@@ -394,13 +394,137 @@ header {
 }
 
 .hunt-card {
+  color: rgb(14, 14, 14);
   border: var(--pistachio) 2px solid;
   box-shadow: 0 0 5px var(--pistachio);
-  padding: 2%;
+  padding: 5%;
   background-color: var(--ferngreen);
 }
 
+.hunt-card summary{
+  font-size: 1.1em;
+  font-weight: 700;
+}
 .hunt-card img {
-  text-align: right;
   width: 30px;
+}
+
+.hunt-card h3 {
+  font-size: 1.1em;
+}
+
+.hunt-desc {
+  color: rgb(14, 14, 14);
+  font-weight: 700;
+  font-size: 1.1em;
+}
+.tick {
+  justify-self: center;
+  align-self: center;
+  color: greenyellow;
+}
+
+.cross {
+  justify-self: center;
+  align-self: center;
+  color: red;
+  font-weight: 700;
+}
+
+.hunt-li {
+  width: 150px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 40px;
+}
+
+.hunt-services {
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+}
+
+/* Slideshow */
+.mySlides {
+  display: none;
+}
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: 0 auto;
+  border: var(--pistachio) 2px solid;
+  box-shadow: 0 0 5px whitesmoke;
+  margin-bottom: 3%;
+}
+
+/* Caption text */
+.text {
+  color: black;
+  font-size: 0.9em;
+  position: absolute;
+
+  bottom: 8px;
+  border: whitesmoke 2px solid;
+  justify-content: center;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 150px;
+  text-align: center;
+  background-color: var(--pistachio);
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 5000ms;
+}
+
+@keyframes fade {
+  0% {
+    opacity: .6
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+/* Fishing */
+.fishing-main {
+  padding: 5%;
+  margin: 0 auto;
+}
+
+.catch {
+  padding: 2%;
+  background-color: var(--ferngreen);
+  border: var(--pistachio) 2px solid;
+  box-shadow: 0 0 5px whitesmoke;
+  margin-bottom: 2%;
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+.catch h2 {
+  text-align: center;
+}
+
+
+.image-gallery {
+  padding: 2%;
+  background-color: var(--ferngreen);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  border: 2px solid var(--pistachio);
+  box-shadow: 0 0 5px whitesmoke;
+}
+
+
+.image-gallery img {
+  max-width: 100%;
+  border: solid 2px var(--darkslategrey);
 }

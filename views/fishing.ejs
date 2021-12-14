@@ -1,5 +1,24 @@
 <%- include('includes/header.ejs') %>
-<main>
-   <h1>Fishing</h1>
+<main class="fishing-main">
+   <div class="fishing">
+      <div class="catch">
+         <h2>What's available to catch?</h2>
+         <ul>
+            <% for (fishy of fish) { %> 
+               <li><p><%= fishy %></p></li>
+            <% } %>
+         </ul>
+
+         <a class="contact-details" href="/contact-us">Enquire for More Info</a>
+      </div>
+
+      <div class="image-gallery">
+         <% for (image of images) { %> 
+            <img src="/img/<%= image.imageUrl %>" alt="Fish Gallery">
+         <% } %> 
+      </div>
+   </div>
+
+
 </main>
 <%- include('includes/footer.ejs') %>

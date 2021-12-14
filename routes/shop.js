@@ -14,8 +14,6 @@ Router.get('/hunting', shopController.getHunt);
 
 Router.get('/fishing', shopController.getFish);
 
-Router.get('/about-us', shopController.getAboutUs);
-
 Router.get('/contact-us', shopController.getContactUs);
 
 Router.get('/', shopController.getIndex);

@@ -1,63 +1,93 @@
 <%- include('includes/header.ejs') %>
+
+<script src="/js/slideshow.js" defer></script>
 <main class="hunting-main">
+
+   <div class="slideshow-container">
+
+      <div class="mySlides fade">
+         <img src="/img/kudu.jpg" style="width:100%">
+         <div class="text">Kudu</div>
+       </div>
+       
+       <div class="mySlides fade">
+         <img src="/img/buffalo.jpg" style="width:100%">
+         <div class="text">Buffalo</div>
+       </div>
+       
+       <div class="mySlides fade">
+         <img src="/img/zebra.jpg" style="width:100%">
+         <div class="text">Zebra</div>
+       </div>
+
+       <div class="mySlides fade">
+         <img src="/img/springbuck.jpg" style="width:100%">
+         <div class="text">Springbuck</div>
+       </div>
+
+       <div class="mySlides fade">
+         <img src="/img/wildebeest.jpg" style="width:100%">
+         <div class="text">Blue Wildebeest</div>
+       </div>
+       
+      </div>
    
    <div class="hunting-cards">
       <% for (let hunt of hunts) { %> 
       <div class="hunt-card">
          <h2><%= hunt.name %></h2>
-
-         <details>
-            <summary>About this Hunt</summary>
-            <p><%= hunt.description %></p>
-         </details>
-         
-
          <h2>$<%= hunt.price %></h2>
 
-         <h3>Services Included</h3>
-         <ul>
-            <li>Trackers: 
+
+         <details>
+            <summary>Read more about this hunt</summary>
+            <p class="hunt-desc"><%= hunt.description %></p>
+         </details>
+         
+         <h3>Services Included:</h3>
+         <ul class="hunt-services">
+            <li class="hunt-li">Trackers: 
                <% if (hunt.trackers == true) { %>
-                  <img src="/img/tick.png" alt="Green tick">
+                  <span class="tick">&#10004;</span>
                <% } else { %>
-                  <img src="/img/cross.png" alt="Red cross">
+                  <span class="cross">&#10005;</span>
                <% } %>
             </li>
 
-            <li>Skinners: 
+            <li class="hunt-li">Skinners: 
                <% if (hunt.skinners == true) { %>
-                  <img src="/img/tick.png" alt="Green tick">
+                  <span class="tick">&#10004;</span>
                <% } else { %>
-                  <img src="/img/cross.png" alt="Red cross">
+                  <span class="cross">&#10005;</span>
                <% } %>
             </li>
 
-            <li>Guides: 
+            <li class="hunt-li">Guides: 
                <% if (hunt.guides == true) { %>
-                  <img src="/img/tick.png" alt="Green tick">
-               <% } else { %>
-                  <img src="/img/cross.png" alt="Red cross">
-               <% } %>
+                  <span class="tick">&#10004;</span>
+                  <% } else { %>
+                     <span class="cross">&#10005;</span>
+                  <% } %>
             </li>
 
-            <li>Trophies: 
+            <li class="hunt-li">Trophies: 
                <% if (hunt.trophies == true) { %>
-                  <img src="/img/tick.png" alt="Green tick">
-               <% } else { %>
-                  <img src="/img/cross.png" alt="Red cross">
-               <% } %>
+                  <span class="tick">&#10004;</span>
+                  <% } else { %>
+                     <span class="cross">&#10005;</span>
+                  <% } %>
             </li>
 
-            <li>Taxidermy: 
+            <li class="hunt-li">Taxidermy: 
                <% if (hunt.taxidermy == true) { %>
-                  <img src="/img/tick.png" alt="Green tick">
-               <% } else { %>
-                  <img src="/img/cross.png" alt="Red cross">
-               <% } %>
+                  <span class="tick">&#10004;</span>
+                  <% } else { %>
+                     <span class="cross">&#10005;</span>
+                  <% } %>
             </li>
          </ul>
 
-         <a href="/contact-us">Enquire for More Info</a>
+         <a class="contact-details" href="/contact-us">Enquire for More Info</a>
       </div>
       <% } %> 
    </div>
