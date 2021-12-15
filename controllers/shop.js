@@ -1,4 +1,5 @@
 const sendgridKey = require('@sendgrid/mail');
+const { validationResult } = require('express-validator/check')
 
 const Safari = require('../models/safari.js');
 const Lodge = require('../models/lodge.js');
@@ -167,6 +168,13 @@ exports.postContact = (req, res, next) => {
       email: email
    });
 
+   const errors = validationResult(req);
+   if (!errors.isEmpty()) {
+      return res.redirect('/')
+   }
+
+   console.log('Yes?')
+
    return user.save()
       .then(result => {
          console.log(result);
@@ -179,6 +187,7 @@ exports.postContact = (req, res, next) => {
             html: `<div style="max-width:100%; padding: 10%; color: white; background-color: #283f3b;"><img style="max-width: 100% border: whitesmoke 2px solid;" src="https://raw.githubusercontent.com/mickym23/WDD330-Final/main/kifarubanner.jpg" alt="Kifaru Banner"><br><h1>We'll contact you shortly. We appreciate your interest in Kifaru Adventures.</h1>
                      <h2>Feel free to email us at: illuminationofdemacia@gmail.com</h2></div>`
          };
+
          sendgridKey
             .send(msg)
             .then(result => {

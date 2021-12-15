@@ -4,13 +4,18 @@
    <h2>We'd love to hear from you!</h2>
 
    <form action="/contact" method="post">
-      <label for="fname">First Name: <input minlength="2" type="text" name="fname" id="fname" autofocus required></label><br>
-      <label for="lname">Last Name: <input type="text" name="lname" id="lname" required></label><br>
-      <label for="email">Email Address: <input type="email" name="email" id="email" required></label>
+      <label for="fname">First Name: </label><input minlength="2" type="text" name="fname" id="fname" autofocus required><br><br>
+      <label for="lname">Last Name: </label><input type="text" name="lname" id="lname" required><br><br>
+      <label for="email">Email Address: </label><input type="email" name="email" id="email" required>
+      <br>
+      <button class="contact-button" type="submit">Submit!</button>
 
-      <button type="submit">Submit!</button>
+      <div class="tel">
+         <p>Tel: (+27) 21 345 7653</p>
+         <p>Email: illuminationofdemacia@gmail.com</p>
+      </div>
    </form>
   
-
+   <script src="/js/validation.js" defer></script>
 </main>
 <%- include('includes/footer.ejs') %>

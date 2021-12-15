@@ -176,6 +176,25 @@
       width: 100%;
    }
 
+   .contact-main {
+      font-size: 1.1em;
+   }
+
+   .contact-main form {
+      font-size: 1.1em;
+      margin: 0 auto;
+      width: 70%;
+   }
+
+   .tel {
+      font-size: 1em;
+      padding: 0.1% 0;
+      width: 50%;
+      border: 2px solid var(--darkslategrey);
+      box-shadow: 0 0 5px whitesmoke;
+      margin-bottom: 5%;
+   }
+
    .footer-links img {
       width: 15.5%;
     }
