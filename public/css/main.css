@@ -557,7 +557,9 @@ header {
   font-family: inherit;
    text-align: left;
    width:35%;
+   font-size: 0.9em;
 }
+
 
 .contact-button {
   padding: 1% 2%;
@@ -575,7 +577,35 @@ header {
   background: var(--pistachio);
   color:rgb(14, 14, 14);
 }
-/* .contact-main input[type="text"]:focus:invalid,
-.contact-main input[type="email"]:focus:invalid {
-  box-shadow: 0 0 5px 1px red;
-}  */
+
+.invalidText {
+  border: 2px double red;
+}
+
+.goodText {
+  border: 2px var(--pistachio) double;
+}
+
+.invalidMessage {
+  margin-top: 15px;
+  color: red;
+}
+
+.validMessage {
+  margin-top: 15px;
+  color: var(--pistachio);
+}
+
+/* Error Main */ 
+.error-main {
+  color: var(--pistachio);
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 5%;;
+}
+
+.error-main img {
+  max-width: 100%;
+  border: whitesmoke 2px solid;
+  box-shadow: 0 0 5px whitesmoke;
+}

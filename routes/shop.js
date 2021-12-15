@@ -24,15 +24,7 @@ Router.post('/contact',
       .normalizeEmail({
          gmail_remove_dots: false
       }) 
-      .withMessage('Please enter a valid email.')
-      .custom((value, { req }) => {
-         return User.findOne({ email: value })
-            .then(userDoc => {
-               if (userDoc) {
-                  return Promise.reject('Email exists already.');
-               }
-            })
-      }), shopController.postContact);
+      .withMessage('Please enter a valid email.'), shopController.postContact);
 
 Router.get('/', shopController.getIndex);
 

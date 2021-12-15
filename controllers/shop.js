@@ -8,7 +8,6 @@ const User = require('../models/user.js');
 
 sendgridKey.setApiKey(process.env.SENDGRID_API_KEY);
 
-
 exports.getIndex = (req, res, next) => {
 
    const facts = [
@@ -38,7 +37,9 @@ exports.getSafari = (req, res, next) => {
          })
       })
       .catch(err => {
-            console.log(err)
+         const error = new Error(err);
+         error.httpStatusCode = 500;
+         return next(error);
    })
 }
 
@@ -56,7 +57,9 @@ exports.getDetails = (req, res, next) => {
                })
             })
             .catch(err => {
-               console.log(err)
+               const error = new Error(err);
+               error.httpStatusCode = 500;
+               return next(error);
             })
          break;
 
@@ -70,12 +73,15 @@ exports.getDetails = (req, res, next) => {
                })
             })
             .catch(err => {
-               console.log(err)
+               const error = new Error(err);
+               error.httpStatusCode = 500;
+               return next(error);
             })
          break;
       default:
-         throw new Error('No case like that!!!')
-         break;
+         const error = new Error(err);
+         error.httpStatusCode = 500;
+         return next(error);
       
    }
 }
@@ -90,7 +96,9 @@ exports.getLodge = (req, res, next) => {
       })
    })
    .catch(err => {
-         console.log(err)
+      const error = new Error(err);
+      error.httpStatusCode = 500;
+      return next(error);
 })
 }
 
@@ -146,7 +154,9 @@ exports.getFish = (req, res, next) => {
          })
       })
       .catch(err => {
-            console.log(err)
+         const error = new Error(err);
+         error.httpStatusCode = 500;
+         return next(error);
    })
 }
 
@@ -172,8 +182,6 @@ exports.postContact = (req, res, next) => {
    if (!errors.isEmpty()) {
       return res.redirect('/')
    }
-
-   console.log('Yes?')
 
    return user.save()
       .then(result => {

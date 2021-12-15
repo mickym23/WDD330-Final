@@ -41,6 +41,18 @@ const options = {
    autoIndex: false
 };
 
+const errorController = require('./controllers/error');
+app.use(errorController.get404);
+
+app.get('/500', errorController.get500);
+
+app.use((error, req, res, next) => {
+   res.status(500).render('500', {
+     pageTitle: 'Error Occurred | Kifaru Adventures',
+     path: '/500'
+   });
+ });
+
 // Connect to db via Mongoose
 mongoose.connect(
    MONGODB_URI, options

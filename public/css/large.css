@@ -186,6 +186,10 @@
       width: 70%;
    }
 
+   .contact-main input {
+      font-size: 1em;
+   }
+
    .tel {
       font-size: 1em;
       padding: 0.1% 0;
